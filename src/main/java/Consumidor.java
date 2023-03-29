@@ -20,6 +20,7 @@ public class Consumidor implements Runnable {
         this.tempo = tempo;
     }
 
+    @Override
     public void run() {
         while (true) {
             try {

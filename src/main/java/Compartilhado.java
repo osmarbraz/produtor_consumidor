@@ -10,7 +10,7 @@ public class Compartilhado {
     private int tamanhoBuffer;
 
     public Compartilhado() {
-        this(2, 5);
+        this(0, 5);
     }
 
     public Compartilhado(int buffer, int tamanhoBuffer) {
@@ -35,7 +35,7 @@ public class Compartilhado {
     }
 
     /**
-     * Método que cosome o dado do buffer.
+     * Método que consome o buffer.
      */
     public void consumir() {
         while (getBuffer() <= 0) { // Buffer vazio, esperando produção
@@ -56,7 +56,7 @@ public class Compartilhado {
     }
 
     /**
-     * Método que produz o dado do buffer.
+     * Método que produz o buffer.
      */
     public void produzir() {
         while (getBuffer() >= getTamanhoBuffer()) { // Buffer cheio, esperando consumir	
