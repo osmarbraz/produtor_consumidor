@@ -1,5 +1,7 @@
 # Implementação do problema do produtor e consumidor em Java.
 
+## Contextualização
+
 A sincronização entre processos concorrentes é quando um recurso compartilhado não se encontra pronto para ser utilizado pelos processos. 
 Nesse caso, o processo que deseja acessar o recurso deverá ser colocado no estado de espera, até o recurso ficar pronto para o processamento. 
 Este tipo de sincronização é chamado sincronização condicional.
@@ -10,3 +12,8 @@ Os processos envolvidos devem estar sincronizados, de forma que um processo não
 O programa implementa um Buffer de tamanho TamBuf, controlado por um contador Cont. 
 Sempre que a variável Cont for igual a 0, significa que o Buffer está vazio e o processo Consumidor deve permanecer aguardando até que se grave um dado. 
 Da mesma forma, quando a variável Cont for igual a tamanhoBuffer, significa que o buffer está cheio e o processo Produtor deve aguardar a leitura de um dado.
+
+## Arquivos
+
+- pom.xml - Arquivo de configuração da ferramenta de automação Maven.
+- *.bat - Arquivos de lote(Batch) de console para tarefas compilar, executar, documentar, empacotar e limpar o projeto.
