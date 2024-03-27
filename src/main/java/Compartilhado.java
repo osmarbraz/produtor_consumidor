@@ -37,7 +37,7 @@ public class Compartilhado {
     /**
      * Método que consome o buffer.
      */
-    public void consumir() {
+    public synchronized void consumir() {
         while (getBuffer() <= 0) { // Buffer vazio, esperando produção
             System.out.println("Buffer Vazio, Consumidor esperando pelo produtor");
             try {
@@ -58,7 +58,7 @@ public class Compartilhado {
     /**
      * Método que produz o buffer.
      */
-    public void produzir() {
+    public synchronized void produzir() {
         while (getBuffer() >= getTamanhoBuffer()) { // Buffer cheio, esperando consumir	
             System.out.println("Buffer Cheio, Produtor esperando pelo Consumidor");
             try {
